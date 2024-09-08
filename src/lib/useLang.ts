@@ -1,13 +1,22 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const useLang = () => {
-  const [lang, setLang] = useState(document.querySelector("html")?.lang!);
-  useEffect(() => {
-    const htmlElement = document.querySelector("html");
+  let documentRef = useRef<Document | null>(null);
+  const [lang, setLang] = useState(
+    documentRef.current
+      ? documentRef.current.querySelector("html")?.lang!
+      : "en"
+  );
 
-    if (htmlElement) {
-      setLang(htmlElement.lang);
+  useEffect(() => {
+    if (document !== undefined) {
+      const htmlElement = document.querySelector("html");
+      if (htmlElement) {
+        setLang(htmlElement.lang);
+      }
+
+      documentRef.current = document;
     }
   }, []);
 

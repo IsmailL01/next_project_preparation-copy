@@ -9,6 +9,7 @@ interface useTranslateProps {
 
 export const useTranslate = (props: useTranslateProps) => {
   const { key, filename } = props;
+  
 
   const lang = useLang();
   const [translatedText, setTranslatedText] = useState("");
