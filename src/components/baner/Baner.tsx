@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import cls from "./baner.module.scss";
-import IMG from "@/app/assets/images/images";
+import IMG from "../../assets/images/images";
 
 export default function Baner() {
   // const t = useTranslations("banner");
