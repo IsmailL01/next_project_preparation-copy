@@ -25,7 +25,7 @@ export default function Baner() {
           <li key={index}>{feature}</li>
         ))}
       </ul> */}
-      <button className={`middleBtn`}>{t("start")}</button>
+      {/* <button className={`middleBtn`}>{t("start")}</button> */}
     </div>
   );
 }
