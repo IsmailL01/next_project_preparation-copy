@@ -6,7 +6,6 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer/client";
 
 export default function Page({ params: { lng } }) {
-  // @ts-expect-error
   const { t } = useTranslation(lng, "second-client-page");
   return (
     <>
