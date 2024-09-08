@@ -16,8 +16,6 @@
 import { useEffect } from "react";
 import { useTheme } from "src/providers/themeProvider/lib/useTheme";
 
-// import { useLocale } from "next-intl";
-
 export default function ThemeBtn() {
   const { theme, changeTheme } = useTheme();
   // const locale = useLocale();

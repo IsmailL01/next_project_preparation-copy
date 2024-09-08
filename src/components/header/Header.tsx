@@ -1,6 +1,5 @@
 "use client";
 
-// import { useTranslations } from "next-intl";
 import LenghtBtn from "../lenghtBtn/lenghtBtn";
 import ThemeBtn from "../themeBtn/ThemeBtn";
 import cls from "./header.module.scss";
