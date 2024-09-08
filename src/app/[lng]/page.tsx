@@ -6,6 +6,7 @@ import { useTranslation } from "../i18n";
 import Header from "src/components/header/Header";
 import { Footer } from "./components/Footer";
 import ThemeBtn from "src/components/themeBtn/ThemeBtn";
+import Baner from "src/components/baner/Baner";
 
 export async function generateMetadata({ params: { lng } }) {
   const { t } = await useTranslation(lng, "banner", {});
@@ -15,6 +16,8 @@ export async function generateMetadata({ params: { lng } }) {
 export default async function Page({ params: { lng } }) {
   if (languages.indexOf(lng) < 0) lng = fallbackLng;
   const { t, i18n } = await useTranslation(lng, "banner", {});
+
+  console.log(t(''))
 
   return (
     <>
@@ -34,6 +37,8 @@ export default async function Page({ params: { lng } }) {
             </span>
           );
         })}
+
+      <Baner />
 
       <Footer lng={lng} path={undefined} />
     </>
